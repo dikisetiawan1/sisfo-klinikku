@@ -1,0 +1,51 @@
+body {
+    background: rgb(221, 220, 220);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #1e5474;
+}
+
+a {
+    text-decoration: none;
+}
+
+a span {
+    color: #1e5474;
+}
+
+.container .footer {
+    background-color: #eef0f1;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.container .footer p span {
+    color: #1e5474;
+    text-align: right;
+    font-size: 18px;
+    font-style: italic;
+    margin: 0px;
+}
+
+.card {
+    border-radius: 18px;
+}
+
+.card:hover {
+    border: 2px solid #1e5474;
+    transition: 0.9s;
+}
+
+.card .card-title {
+    font-size: 24px;
+}
+
+.card .card-body {
+    margin-top: -80px;
+    margin-left: 100px;
+
+}
+
+.card .card-body p span {
+    font-size: 94px;
+}

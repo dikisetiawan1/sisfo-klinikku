@@ -49,3 +49,7 @@ a span {
 .card .card-body p span {
     font-size: 94px;
 }
+
+.nav-link:active {
+    background-color: #1e5474;
+}

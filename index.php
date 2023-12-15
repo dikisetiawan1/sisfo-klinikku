@@ -21,7 +21,6 @@ $page = isset($_GET['page']) ? $_GET['page'] : false;
 </head>
 
 <body>
-
     <div class="container">
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -72,14 +71,16 @@ $page = isset($_GET['page']) ? $_GET['page'] : false;
                     </ul>
                 </div>
                 <div class="d-flex">
-                    <a href="<?php echo BASE_URL . "index.php?page=logout" ?>">
-                        <span class="me-2">Logout</span>
 
+                    <a href="<?php echo BASE_URL . "index.php?page=notif" ?>">
+                        <img style="color: #1e5474; margin-right:20px" src="./assets/img/notif.svg" alt="notif">
+                    </a>
+                    <a href="<?php echo BASE_URL . "index.php?page=logout" ?>">
+                        <img style="color: #1e5474; margin-right:20px" src="./assets/img/logout.svg" alt="logout">
                     </a>
                 </div>
             </div>
         </nav>
-
         <!-- main content -->
         <div class="content">
             <?php
@@ -93,9 +94,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : false;
             }
             ?>
         </div>
-
         <!-- footer -->
-
         <div class="footer">
             <p><span>Copyright @dikset101 <?php echo date("Y"); ?></span></p>
         </div>
@@ -127,10 +126,10 @@ $page = isset($_GET['page']) ? $_GET['page'] : false;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+
 </body>
 
 </html>

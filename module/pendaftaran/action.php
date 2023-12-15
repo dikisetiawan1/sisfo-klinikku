@@ -19,5 +19,10 @@ if ($button == "Add") {
     VALUES('$nama','$usia', '$jk', '$alamat', '$ortu', '$tensi_darah', '$bb', '$tgl_daftar');
     ");
 
-    header("location:" . BASE_URL . "index.php?page=my_profile&module=pendaftaran&action=nomor_antrean");
+    if ($query) {
+        $last_id_pasien = mysqli_insert_id($koneksi);
+        $queryInput = mysqli_query($koneksi, "INSERT INTO riwayat_pasien (id_pasien)
+                                                       VALUES ('$last_id_pasien')");
+    }
+    header("location:" . BASE_URL . "index.php?page=my_profile&module=pendaftaran&action=riwayat");
 }

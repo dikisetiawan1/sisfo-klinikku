@@ -4,13 +4,16 @@ include_once './function/koneksi.php';
 
 
 $query = mysqli_query($koneksi, "SELECT * FROM pasien");
+$queryRiwayat = mysqli_query($koneksi, "SELECT * FROM riwayat_pasien");
+$rowRiwayat = mysqli_fetch_assoc($queryRiwayat);
+
 if (mysqli_num_rows($query) == 0) {
     echo "Maaf, Data pasien masih kosong.";
 } else {
     echo "
-<table class=' table table-striped mt-4'>
+<table class=' table table-striped mt-4' >
     <thead>
-        <tr>
+        <tr style='background: white'>
             <th>No</th>
             <th>Nama</th>
             <th>Usia</th>
@@ -35,7 +38,7 @@ if (mysqli_num_rows($query) == 0) {
             <td>$row[jk]</td>
             <td>$row[nama_ortu]</td>
             <td>
-            <a href='" . BASE_URL . "index.php?page=riwayat_pasien'>Riwayat Pasien</a> |
+            <a href='" . BASE_URL . "index.php?page=my_profile&module=pendaftaran&action=riwayat_pasien&id_pasien=$row[id_pasien]'>Riwayat Pasien</a> |
             <a href='" . BASE_URL . "index.php?page=edit_pasien'>Edit</a> |
             <a href='" . BASE_URL . "index.php?page=hapus_pasien'>Hapus</a>
             </td>

@@ -7,7 +7,7 @@ $queryPasien = mysqli_query($koneksi, "SELECT * from pasien");
 $countPasien = mysqli_num_rows($queryPasien);
 $queryObat = mysqli_query($koneksi, "SELECT * from obat");
 $countObat = mysqli_num_rows($queryObat);
-$queryDokter = mysqli_query($koneksi, "SELECT * from obat");
+$queryDokter = mysqli_query($koneksi, "SELECT * from dokter");
 $countDokter = mysqli_num_rows($queryDokter);
 
 ?>

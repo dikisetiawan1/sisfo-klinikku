@@ -53,3 +53,19 @@ a span {
 .nav-link:active {
     background-color: #1e5474;
 }
+
+.tabs a {
+    padding: 10px;
+    color: white;
+}
+
+.tabs a:hover,
+.tabs a:active {
+    background-color: white;
+    color: #1e5474;
+}
+
+.tabs a .active {
+    background-color: white;
+    color: #1e5474;
+}

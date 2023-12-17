@@ -5,6 +5,7 @@ include_once './function/koneksi.php';
 $id_pasien = isset($_GET['id_pasien']) ? $_GET['id_pasien'] : false;
 $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
 
+
 ?>
 <div class="tabs mt-4">
     <nav>
@@ -27,8 +28,10 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
                 }
                 ?>
                 <?php if ($id_pasien == $row['id_pasien']) : ?>
-
-                    <a href="<?php echo BASE_URL . "index.php?page=my_profile&module=pendaftaran&action=riwayat_pasien&id_pasien=$id_pasien&id_riwayatP=$row[id_riwayatP]" ?>"><?php echo $row['tgl_berobat']; ?></a>
+                    <a <?php if ($id_riwayat == $row['id_riwayatP']) {
+                            echo "class='nav-link active'";
+                        } ?> href="<?php echo BASE_URL . "index.php?page=my_profile&module=pendaftaran&action=riwayat_pasien&id_pasien=$id_pasien&id_riwayatP=$row[id_riwayatP]" ?>"><?php echo $row['tgl_berobat']; ?>
+                    </a>
                 <?php endif; ?>
             <?php endforeach; ?>
         </div>

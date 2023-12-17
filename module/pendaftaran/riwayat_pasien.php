@@ -16,14 +16,11 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
                   FROM riwayat_pasien 
                   JOIN pasien ON riwayat_pasien.id_pasien = pasien.id_pasien "
             );
-            $rows = array();
-            while ($row = mysqli_fetch_assoc($query)) {
-                $rows[] = $row;
-            }
+
             ?>
             <?php
             $status = "";
-            foreach ($rows as $row) : ?>
+            foreach ($query as $row) : ?>
                 <?php
                 if ($id_riwayat == $row['id_riwayatP']) {
                     $status .= $row['status'];

@@ -16,7 +16,6 @@ if (mysqli_num_rows($query) == 0) {
         <tr style='background: white'>
             <th>No</th>
             <th>Nama</th>
-            <th>Usia</th>
             <th>Alamat</th>
             <th>Jenis Kelamin</th>
             <th>Nama ayah</th>
@@ -33,7 +32,6 @@ if (mysqli_num_rows($query) == 0) {
         <tr>
             <td>$no</td>
             <td>$row[nama]</td>
-            <td>$row[usia]</td>
             <td>$row[alamat]</td>
             <td>$row[jk]</td>
             <td>$row[nama_ortu]</td>

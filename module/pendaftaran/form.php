@@ -41,7 +41,7 @@ include_once './function/koneksi.php';
             </div>
             <div class=" mt-2">
                 <label for="" class="form-lable">Tgl Daftar<span style="color: red;">*</span></label>
-                <input type="date" name="tgl_daftar" id="" placeholder="" class="form-control" required>
+                <input type="date" name="tgl_berobat" id="" placeholder="" class="form-control" required>
             </div>
             <div class=" mt-2">
                 <input type="submit" name="button" value="Add" class="btn btn-primary">

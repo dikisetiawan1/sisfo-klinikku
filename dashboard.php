@@ -16,7 +16,7 @@ $countDokter = mysqli_num_rows($queryDokter);
     <div class="row">
         <div class="col-4">
             <a href="<?php echo BASE_URL . "index.php?page=my_profile&module=pendaftaran&action=list"; ?>">
-                <div class="card shadow mt-5">
+                <div class="card dashboard shadow mt-5">
                     <div class="card-title m-5">
                         <p><span>Data Pasien</span></p>
                     </div>
@@ -28,7 +28,7 @@ $countDokter = mysqli_num_rows($queryDokter);
         </div>
         <div class="col-4">
             <a href="<?php echo BASE_URL . "index.php?page=data_obat"; ?>">
-                <div class="card shadow mt-5">
+                <div class="card dashboard  shadow mt-5">
                     <div class="card-title m-5">
                         <p><span>Data Obat</span></p>
                     </div>
@@ -40,7 +40,7 @@ $countDokter = mysqli_num_rows($queryDokter);
         </div>
         <div class="col-4">
             <a href="<?php echo BASE_URL . "index.php?page=data_dokter"; ?>">
-                <div class="card shadow mt-5">
+                <div class="card dashboard shadow mt-5">
                     <div class="card-title m-5">
                         <p><span>Data Dokter</span></p>
                     </div>

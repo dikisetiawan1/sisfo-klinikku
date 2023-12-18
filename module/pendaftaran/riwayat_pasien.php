@@ -13,7 +13,7 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
             <?php
             $query = mysqli_query(
                 $koneksi,
-                "SELECT riwayat_pasien.status,riwayat_pasien.id_riwayatP,riwayat_pasien.id_pasien, riwayat_pasien.tgl_berobat,riwayat_pasien.usia,riwayat_pasien.tensi_darah,riwayat_pasien.berat_badan, pasien.nama,  pasien.jk, pasien.nama_ortu
+                "SELECT riwayat_pasien.status,riwayat_pasien.id_riwayatP,riwayat_pasien.id_pasien, riwayat_pasien.tgl_berobat,riwayat_pasien.usia,riwayat_pasien.tensi_darah,riwayat_pasien.berat_badan,riwayat_pasien.catatan,riwayat_pasien.jenis_sakit, pasien.nama,  pasien.jk, pasien.nama_ortu
                   FROM riwayat_pasien 
                   JOIN pasien ON riwayat_pasien.id_pasien = pasien.id_pasien "
             );
@@ -26,6 +26,8 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
             $ortu = "";
             $tensi_darah = "";
             $berat_badan = "";
+            $catatan = "";
+            $jenis_sakit = "";
             foreach ($query as $row) : ?>
                 <?php
                 if ($id_riwayat == $row['id_riwayatP']) {
@@ -35,6 +37,8 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
                     $tensi_darah .= $row['tensi_darah'];
                     $berat_badan .= $row['berat_badan'];
                     $jk .= $row['jk'];
+                    $catatan .= $row['catatan'];
+                    $jenis_sakit .= $row['jenis_sakit'];
                 }
                 ?>
                 <?php if ($id_pasien == $row['id_pasien']) : ?>
@@ -91,7 +95,11 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
                                         </tr>
 
                                     </tbody>
+
                                 </table>
+                                <div class="nomor_antrean">
+                                    <a style=" color:#1e5474;" href=" <?php echo BASE_URL . "index.php? page=my_profile&module=pendaftaran&action=nomor_antrean&id_pasien=$id_pasien" ?>">Cetak no Antrean</a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-6">
@@ -99,21 +107,16 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
                                 <p><span>Riwayat</span></p>
                             </div>
                             <div class="card-body mt-5" style="margin-left:-5px; text-align:justify;">
-                                <ul>
-                                    <li>
-                                        Sakit Magh
-                                    </li>
-                                    <li>
-                                        Meriang
-                                    </li>
-                                    <li>
-                                        Sakit kepala
-                                    </li>
-                                </ul>
-                                <p>Catatan:</p>
-                                <p>Sakit maag dapat disebabkan oleh penyakit pada organ di saluran pencernaan, seperti tukak lambung, infeksi bakteri H. pylori, peradangan di lambung (gastritis), dan penyakit refluks asam lambung (GERD).
-
-                                    Selain penyakit, penggunaan obat-obatan, seperti obat antiinflamasi nonsteroid (OAINS), seperti aspirin atau ibuprofen, antibiotik seperti ciprofloxacin atau azithromycin, serta obat kortikosteroid juga dapat menyebabkan sakit maag..</p>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <p><b><?php echo $jenis_sakit; ?></b></p>
+                                    </div>
+                                    <div class="col-4">
+                                        <a style="background:#1e5474; color:white" href="<?php echo BASE_URL . "index.php?page=my_profile&module=obat&action=data_obat" ?>">Rincian Obat</a>
+                                    </div>
+                                </div>
+                                <p><i>Catatan Dokter:</i></p>
+                                <p><?php echo $catatan; ?></p>
                             </div>
                         </div>
                     </div>

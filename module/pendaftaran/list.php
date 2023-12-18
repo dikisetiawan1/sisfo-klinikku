@@ -11,7 +11,8 @@ if (mysqli_num_rows($query) == 0) {
     echo "Maaf, Data pasien masih kosong.";
 } else {
     echo "
-<table class=' table table-striped mt-4' >
+    <table class=' table table-striped' >
+    <p class='mt-4 fs-5'>Data Pasien</p>
     <thead>
         <tr style='background: white'>
             <th>No</th>

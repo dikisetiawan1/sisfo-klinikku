@@ -5,7 +5,7 @@ include_once './function/koneksi.php';
 
 <form style="display: flex; justify-content:center" action="<?php echo BASE_URL . "module/pendaftaran/action.php" ?>" method="POST">
     <div class="col-6 mt-4 ">
-        <p>Formulir Pendaftaran Pasien Baru</p>
+        <p class="mt-4 fs-5">Formulir Pendaftaran Pasien Baru</p>
         <div class="form-control">
             <div class=" mt-2">
                 <label for="" class="form-lable">Nama Pasien <span style="color: red;">*</span></label>

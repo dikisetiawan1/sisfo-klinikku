@@ -13,7 +13,7 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
             <?php
             $query = mysqli_query(
                 $koneksi,
-                "SELECT riwayat_pasien.status,riwayat_pasien.id_riwayatP,riwayat_pasien.id_pasien, riwayat_pasien.tgl_berobat,riwayat_pasien.usia,riwayat_pasien.tensi_darah,riwayat_pasien.berat_badan,riwayat_pasien.catatan,riwayat_pasien.jenis_sakit, pasien.nama,  pasien.jk, pasien.nama_ortu
+                "SELECT riwayat_pasien.id_riwayatP,riwayat_pasien.id_pasien, riwayat_pasien.tgl_berobat,riwayat_pasien.usia,riwayat_pasien.tensi_darah,riwayat_pasien.berat_badan,riwayat_pasien.catatan,riwayat_pasien.jenis_sakit, pasien.nama,  pasien.jk, pasien.nama_ortu
                   FROM riwayat_pasien 
                   JOIN pasien ON riwayat_pasien.id_pasien = pasien.id_pasien "
             );
@@ -28,6 +28,8 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
             $berat_badan = "";
             $catatan = "";
             $jenis_sakit = "";
+            $id_riwayatP = "";
+            $tgl_berobat = "";
             foreach ($query as $row) : ?>
                 <?php
                 if ($id_riwayat == $row['id_riwayatP']) {
@@ -39,6 +41,8 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
                     $jk .= $row['jk'];
                     $catatan .= $row['catatan'];
                     $jenis_sakit .= $row['jenis_sakit'];
+                    $id_riwayatP .= $row['id_riwayatP'];
+                    $tgl_berobat .= $row['tgl_berobat'];
                 }
                 ?>
                 <?php if ($id_pasien == $row['id_pasien']) : ?>
@@ -98,7 +102,7 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
 
                                 </table>
                                 <div class="nomor_antrean">
-                                    <a style=" color:#1e5474;" href=" <?php echo BASE_URL . "index.php? page=my_profile&module=pendaftaran&action=nomor_antrean&id_pasien=$id_pasien" ?>">Cetak no Antrean</a>
+                                    <a style=" color:#1e5474;" href=" <?php echo BASE_URL . "index.php? page=my_profile&module=pendaftaran&action=nomor_antrean&id_riwayatP=$id_riwayatP&tgl_berobat=$tgl_berobat" ?>">Cetak no Antrean</a>
                                 </div>
                             </div>
                         </div>

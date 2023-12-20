@@ -4,8 +4,6 @@ include_once './function/koneksi.php';
 
 $id_pasien = isset($_GET['id_pasien']) ? $_GET['id_pasien'] : false;
 $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
-
-
 ?>
 <div class="tabs mt-4">
     <nav>
@@ -59,10 +57,17 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
         <div class="container">
             <div class="row">
                 <div class="card" style="border-radius: 5px;">
+                    <div class="row ">
+                        <div class=" col-4 m-2 mt-4 btn-tambahRiwayat">
+                            <a href=" <?php echo BASE_URL . "index.php? page=my_profile&module=pendaftaran&action=" ?>">Tambah Riwayat</a>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-6">
-                            <div class="card-title m-5">
+
+                            <div class="card-title m-2">
                                 <p><span>Data pasien</span></p>
+
                             </div>
                             <div class="card-body mt-2" style="margin-left:-5px">
                                 <table class="table">
@@ -102,12 +107,12 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
 
                                 </table>
                                 <div class="nomor_antrean">
-                                    <a style=" color:#1e5474;" href=" <?php echo BASE_URL . "index.php? page=my_profile&module=pendaftaran&action=nomor_antrean&id_riwayatP=$id_riwayatP&tgl_berobat=$tgl_berobat   " ?>">Cetak no Antrean</a>
+                                    <a style=" color:red; font-weight:bold" href=" <?php echo BASE_URL . "index.php? page=my_profile&module=pendaftaran&action=nomor_antrean&id_riwayatP=$id_riwayatP&tgl_berobat=$tgl_berobat" ?>">Cetak no Antrean</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-6">
-                            <div class="card-title m-5">
+                            <div class="card-title m-2">
                                 <p><span>Riwayat</span></p>
                             </div>
                             <div class="card-body mt-5" style="margin-left:-5px; text-align:justify;">
@@ -116,7 +121,7 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
                                         <p><b><?php echo $jenis_sakit; ?></b></p>
                                     </div>
                                     <div class="col-4">
-                                        <a style="background:#1e5474; color:white" href="<?php echo BASE_URL . "index.php?page=my_profile&module=obat&action=data_obat" ?>">Rincian Obat</a>
+                                        <a class="btn-obat" href="<?php echo BASE_URL . "index.php?page=my_profile&module=obat&action=data_obat" ?>">Rincian Obat</a>
                                     </div>
                                 </div>
                                 <p><i>Catatan Dokter:</i></p>

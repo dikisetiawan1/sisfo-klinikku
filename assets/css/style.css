@@ -69,9 +69,31 @@ p span {
 .tabs a:active {
     background-color: white;
     color: #1e5474;
+    transition: 0.7s;
 }
 
 .tabs a .active {
     background-color: white;
     color: #1e5474;
+}
+
+.tabs .btn-obat {
+    border: 1px solid orange;
+    color: orange;
+    font-size: 12px;
+}
+
+.tabs .btn-tambahRiwayat a {
+    background-color: orange;
+    margin-top: 30px;
+    font-size: 12px;
+    border-radius: 3px;
+    color: black;
+
+}
+
+.tabs .btn-tambahRiwayat a:hover {
+    color: black;
+    background-color: rgb(255, 184, 51);
+    transition: 0.7s;
 }

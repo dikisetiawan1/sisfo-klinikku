@@ -10,7 +10,7 @@ $tgl_berobat = isset($_GET['tgl_berobat']) ? $_GET['tgl_berobat'] : false;
 
 <h1>Nomor Antrean</h1>
 <?php
-$query = mysqli_query($koneksi, "SELECT pasien.nama, nomor_antrean.id_riwayatP, riwayat_pasien.tgl_berobat, riwayat_pasien.id_pasien FROM nomor_antrean 
+$query = mysqli_query($koneksi, "SELECT  pasien.nama, nomor_antrean.id_riwayatP, riwayat_pasien.tgl_berobat, riwayat_pasien.id_pasien FROM nomor_antrean 
 JOIN pasien ON nomor_antrean.id_pasien = pasien.id_pasien
 JOIN riwayat_pasien ON nomor_antrean.id_riwayatP = riwayat_pasien.id_riwayatP
 

@@ -24,5 +24,10 @@ if ($button == "Add") {
         $queryInput = mysqli_query($koneksi, "INSERT INTO riwayat_pasien (id_pasien, tgl_berobat, berat_badan, tensi_darah, usia)
                                                        VALUES ('$last_id_pasien','$tgl_daftar','$bb','$tensi_darah','$usia')");
     }
+    if ($queryInput) {
+        $last_id_riwayat = mysqli_insert_id($koneksi);
+        $queryAntrean = mysqli_query($koneksi, "INSERT INTO nomor_antrean (id_riwayatP, id_pasien)
+                                        VALUES ('$last_id_riwayat','$last_id_pasien')");
+    }
     header("location:" . BASE_URL . "index.php?page=my_profile&module=pendaftaran&action=riwayat");
 }

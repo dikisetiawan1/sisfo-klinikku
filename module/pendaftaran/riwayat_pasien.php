@@ -102,7 +102,7 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
 
                                 </table>
                                 <div class="nomor_antrean">
-                                    <a style=" color:#1e5474;" href=" <?php echo BASE_URL . "index.php? page=my_profile&module=pendaftaran&action=nomor_antrean&id_riwayatP=$id_riwayatP&tgl_berobat=$tgl_berobat" ?>">Cetak no Antrean</a>
+                                    <a style=" color:#1e5474;" href=" <?php echo BASE_URL . "index.php? page=my_profile&module=pendaftaran&action=nomor_antrean&id_riwayatP=$id_riwayatP&tgl_berobat=$tgl_berobat   " ?>">Cetak no Antrean</a>
                                 </div>
                             </div>
                         </div>

@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <?php
-
 include_once './function/helper.php';
 include_once './function/koneksi.php';
 
@@ -60,18 +59,16 @@ $page = isset($_GET['page']) ? $_GET['page'] : false;
                                 Obat
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Data obat</a></li>
-                                <li><a class="dropdown-item" href="#">Stok obat</a></li>
+                                <li><a class="dropdown-item" href="<?php echo BASE_URL . "index.php?page=my_profile&module=obat&action=list" ?>">Data obat</a></li>
+                                <li><a class="dropdown-item" href="<?php echo BASE_URL . "index.php?page=my_profile&module=stok_obat&action=list" ?>">Stok obat</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">User</a>
                         </li>
-
                     </ul>
                 </div>
                 <div class="d-flex">
-
                     <a href="<?php echo BASE_URL . "index.php?page=notif" ?>">
                         <img style="color: #1e5474; margin-right:20px" src="./assets/img/notif.svg" alt="notif">
                     </a>
@@ -85,11 +82,9 @@ $page = isset($_GET['page']) ? $_GET['page'] : false;
         <div class="content">
             <?php
             $filename = "$page.php";
-
             if (file_exists($filename)) {
                 include_once($filename);
             } else {
-
                 include_once("dashboard.php");
             }
             ?>

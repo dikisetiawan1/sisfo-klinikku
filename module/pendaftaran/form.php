@@ -12,10 +12,6 @@ include_once './function/koneksi.php';
                 <input type="text" name="nama" id="" placeholder="" class="form-control" required>
             </div>
             <div class=" mt-2">
-                <label for="" class="form-lable">Usia<span style="color: red;">*</span></label>
-                <input type="text" name="usia" id="" placeholder="" class="form-control" required>
-            </div>
-            <div class=" mt-2">
                 <label for="jk" class="form-lable">Jk<span style="color: red;">*</span></label>
                 <select name="jk" id="jk" class="form-control" required>
                     <option selected>--Pilih Jenis Kelamin--</option>
@@ -30,18 +26,6 @@ include_once './function/koneksi.php';
             <div class=" mt-2">
                 <label for="" class="form-lable">Ayah<span style="color: red;">*</span></label>
                 <input type="text" name="nama_ortu" id="" placeholder="" class="form-control" required>
-            </div>
-            <div class=" mt-2">
-                <label for="" class="form-lable">Tensi Darah<span style="color: red;">*</span></label>
-                <input type="text" name="tensi_darah" id="" placeholder="" class="form-control" required>
-            </div>
-            <div class=" mt-2">
-                <label for="" class="form-lable">BB<span style="color: red;">*</span></label>
-                <input type="text" name="berat_badan" id="" placeholder="" class="form-control" required>
-            </div>
-            <div class=" mt-2">
-                <label for="" class="form-lable">Tgl Daftar<span style="color: red;">*</span></label>
-                <input type="date" name="tgl_berobat" id="" placeholder="" class="form-control" required>
             </div>
             <div class=" mt-2">
                 <input type="submit" name="button" value="Add" class="btn btn-primary">

@@ -11,7 +11,6 @@ $tgl_daftar = htmlspecialchars($_POST['tgl_berobat']);
 $jenis_sakit = htmlspecialchars($_POST['jenis_sakit']);
 $catatan = htmlspecialchars($_POST['catatan']);
 $button = $_POST['button'];
-
 if ($button == "Add") {
     $queryInput = mysqli_query($koneksi, "INSERT INTO riwayat_pasien (id_pasien, tgl_berobat, berat_badan, tensi_darah, usia, jenis_sakit, catatan)
                                                        VALUES ('$id_pasien','$tgl_daftar','$bb','$tensi_darah','$usia','$jenis_sakit','$catatan')");

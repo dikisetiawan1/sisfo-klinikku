@@ -38,7 +38,7 @@ if (mysqli_num_rows($query) == 0) {
             <td>$row[nama_ortu]</td>
             <td>
             <a href='" . BASE_URL . "index.php?page=my_profile&module=pendaftaran&action=riwayat_pasien&id_pasien=$row[id_pasien]'>Riwayat Pasien</a> |
-            <a href='" . BASE_URL . "index.php?page=edit_pasien'>Edit</a> |
+            <a href='" . BASE_URL . "index.php?page=my_profile&module=pendaftaran&action=form&id_pasien=$row[id_pasien]'>Edit</a> |
             <a href='" . BASE_URL . "index.php?page=hapus_pasien'>Hapus</a>
             </td>
         </tr> ";

@@ -61,7 +61,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : false;
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">User</a>
+                            <a class="nav-link" href="<?php echo BASE_URL . "index.php?page=my_profile&module=users&action=list" ?>">User</a>
                         </li>
                     </ul>
                 </div>

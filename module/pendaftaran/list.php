@@ -3,12 +3,14 @@ include_once './function/helper.php';
 include_once './function/koneksi.php';
 
 
-$query = mysqli_query($koneksi, "SELECT * FROM pasien");
-$queryRiwayat = mysqli_query($koneksi, "SELECT * FROM riwayat_pasien");
-$rowRiwayat = mysqli_fetch_assoc($queryRiwayat);
-
+if (isset($_GET['statusAdd']) == "berhasil") {
+    echo "<script>alert('Selamat, Data berhasil di simpan.')</script>";
+} else if (isset($_GET['statusUpdate']) == "berhasil") {
+    echo "<script>alert('Ok, Data berhasil di ubah.')</script>";
+}
+$query = mysqli_query($koneksi, "SELECT * FROM pasien ORDER BY id_pasien DESC LIMIT 10");
 if (mysqli_num_rows($query) == 0) {
-    echo "Maaf, Data pasien masih kosong.";
+    echo "Data pasien masih kosong, silahkan tambah data pasien.";
 } else {
     echo "
     <table class=' table table-striped' >
@@ -24,9 +26,7 @@ if (mysqli_num_rows($query) == 0) {
         </tr>
     </thead>
     <tbody>";
-
     $no = 1;
-
     while ($row = mysqli_fetch_assoc($query)) {
 
         echo "
@@ -44,8 +44,6 @@ if (mysqli_num_rows($query) == 0) {
         </tr> ";
         $no++;
     }
-
-
     echo "</tbody>";
 
     echo "</table>";

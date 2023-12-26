@@ -27,7 +27,7 @@ $countDokter = mysqli_num_rows($queryDokter);
             </a>
         </div>
         <div class="col-4">
-            <a href="<?php echo BASE_URL . "index.php?page=data_obat"; ?>">
+            <a href="<?php echo BASE_URL . "index.php?page=my_profile&module=obat&action=list"; ?>">
                 <div class="card dashboard  shadow mt-5">
                     <div class="card-title m-5">
                         <p><span>Data Obat</span></p>

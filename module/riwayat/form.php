@@ -11,7 +11,7 @@ include_once './function/koneksi.php';
                 <select name="id_pasien" id="" class="form-control">
                     <option selected>-- Pilih nama pasien --</option>
                     <?php
-                    $query = mysqli_query($koneksi, "SELECT nama, id_pasien FROM pasien");
+                    $query = mysqli_query($koneksi, "SELECT nama, id_pasien FROM pasien ORDER BY nama ASC");
                     while ($row = mysqli_fetch_assoc($query)) {
                         echo "
                             <option value='$row[id_pasien]'>$row[nama]</option>

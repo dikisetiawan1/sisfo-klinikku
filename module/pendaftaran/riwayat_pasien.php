@@ -58,7 +58,7 @@ $id_riwayat = isset($_GET['id_riwayatP']) ? $_GET['id_riwayatP'] : false;
             <div class="row">
                 <div class="card" style="border-radius: 5px;">
                     <div class="row ">
-                        <div class=" col-4 m-2 mt-4 btn-tambahRiwayat">
+                        <div class=" col-4 m-2 mt-4 btn-action">
                             <a href=" <?php echo BASE_URL . "index.php? page=my_profile&module=riwayat&action=form" ?>">Tambah Riwayat</a>
                         </div>
                     </div>
